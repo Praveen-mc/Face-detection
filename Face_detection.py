@@ -2,9 +2,9 @@ import cv2
 import os
 cascPath=os.path.dirname(cv2.__file__)+"/data/haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascPath)
-capture = cv2.VideoCapture(0)
+capture = cv2.VideoCapture(0) #capturing video
 
-while True:
+while (True):
     # Capture frame-by-frame
     ret, frames = capture.read()
 
@@ -29,4 +29,4 @@ while True:
         break
 
 capture.release()
-#cv2.destroyAllWindows()
+cv2.destroyAllWindows()
