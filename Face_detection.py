@@ -20,7 +20,11 @@ while (True):
 
     # Draw a rectangle around the faces
     for (x, y, w, h) in faces:
+        # cv2.rectangle(image ,start_point, end_point, color, thickness)
         cv2.rectangle(frames, (x, y), (x+w, y+h), (0, 255, 0), 2)
+        
+        # cv2.putText(image, text, org, font, fontScale, color[, thickness[, lineType[, bottomLeftOrigin]]])
+        cv2.putText(frames, 'FACE',(x,y),cv2.FONT_HERSHEY_SIMPLEX,1,(0,255,2),1,cv2.LINE_AA)
 
     # Display the resulting frame
     cv2.imshow('Video', frames)
